@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dynamic Blog Page with Next.js, Tailwind CSS, and Redux
+
+![GitHub](https://img.shields.io/github/license/deveshshrestha20/blog-web)
+![GitHub last commit](https://img.shields.io/github/last-commit/deveshshrestha20/blog-web)
+![GitHub repo size](https://img.shields.io/github/repo-size/deveshshrestha20/blog-web)
+
+**Dynamic Blog Page** is a modern, responsive blogging platform built using **Next.js**, **Tailwind CSS**, and **Redux**. It fetches blog data from a mock API (or static JSON file) and displays it in a clean, user-friendly layout. The project includes features like dynamic routing, search functionality, pagination, and a responsive design.
+
+---
+
+## Features
+
+- **Homepage (Blog List Page)**:
+  - Fetch and display a list of blog posts with titles, summaries, and dates.
+  - Responsive grid layout using Tailwind CSS.
+  - Clickable posts that redirect to the blog detail page.
+  - Loading states with Skeleton UI or loaders for better UX.
+- **Blog Post Detail Page**:
+  - Dynamic routing for each blog post (e.g., `/blog/[slug]`).
+  - Display full content of the blog post (title, full text, and date).
+  - Styled using Tailwind CSS.
+- **Search Functionality**:
+  - Case-insensitive search bar to filter blog posts by title.
+  - Real-time filtering with debounce for better performance.
+  - Display "No posts found" if no matching results are found.
+- **Pagination**:
+  - Display a limited number of posts per page (e.g., 5 posts per page).
+- **Redux Integration**:
+  - Manage global state (e.g., search query, pagination) using Redux.
+- **Responsive Design**:
+  - Fully responsive layout using Tailwind CSS utility classes.
+
+---
+
+## Technologies Used
+
+- **Frontend**: Next.js, React.js
+- **Styling**: Tailwind CSS
+- **State Management**: Redux
+- **Routing**: Next.js Dynamic Routing
+- **Data Fetching**: `getStaticProps` or `getServerSideProps`
+- **Debounce**: Implemented for search functionality
+- **Deployment**: Vercel (or any preferred hosting service)
+
+---
+
+## Screenshots
+
+![Home Page](screenshots/home.png)  
+*Home Page with Blog List and Search Bar*
+
+![Blog Detail Page](screenshots/detail.png)  
+*Blog Post Detail Page*
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up the project locally on your machine.
 
-```bash
+### Prerequisites
+
+- Node.js (v16 or higher)
+- Git
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/deveshshrestha20/blog-web.git
+   cd blog-web
+
+   Install dependencies:
+
+bash
+Copy
+npm install
+Run the development server:
+
+bash
+Copy
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Access the application:
+Open your browser and navigate to http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Key Functionality
+1. Fetching Blog Data
+Blog data is fetched using getStaticProps or getServerSideProps in Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Mock data is stored in a JSON file or simulated using an API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Dynamic Routing
+Each blog post has a dedicated page using Next.js dynamic routing (/blog/[slug]).
 
-## Learn More
+3. Search Functionality
+The search bar filters blog posts in real-time using Redux for state management.
 
-To learn more about Next.js, take a look at the following resources:
+Debounce is implemented to optimize performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Pagination
+Blog posts are paginated with a limit of 5 posts per page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Responsive Design
+Tailwind CSS utility classes are used to ensure the layout is fully responsive.
 
-## Deploy on Vercel
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fork the repository.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a new branch (git checkout -b feature/YourFeatureName).
+
+Commit your changes (git commit -m 'Add some feature').
+
+Push to the branch (git push origin feature/YourFeatureName).
+
+Open a pull request.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
