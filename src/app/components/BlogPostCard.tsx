@@ -3,13 +3,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiClock, FiUser } from 'react-icons/fi';
-import { BlogPost } from '../../types';
+import { BlogPost } from '@/store/types';
+import { useState } from 'react';
 
 interface BlogPostCardProps {
   post: BlogPost;
 }
 
 const BlogPostCard = ({ post }: BlogPostCardProps) => {
+  const [imageLoading, setImageLoading] = useState(true);
+
   return (
     <div className="bg-white dark:bg-[#2A2A2A] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl border border-[#E1E5EA] dark:border-[#333333] hover:border-[#D1D5DA] dark:hover:border-[#404040]">
       <div className="relative w-full h-56">
@@ -17,10 +20,17 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
           src={post.image}
           alt={post.title}
           fill
-          className="object-cover hover:opacity-80 transition-opacity rounded-t-xl"
+          className={`
+            object-cover hover:opacity-80 transition-opacity rounded-t-xl
+            ${imageLoading ? 'opacity-0' : 'opacity-100'}
+          `}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loading="lazy"
+          onLoadingComplete={() => setImageLoading(false)}
         />
+        {imageLoading && (
+          <div className="absolute inset-0 bg-[#E5E5E5] dark:bg-[#333333] animate-pulse rounded-t-xl" />
+        )}
       </div>
       <div className="p-5 space-y-3">
         <span className="inline-block px-3 py-1 text-xs font-medium bg-[#F0F2F5] dark:bg-[#333333] text-[#1A1A1A] dark:text-white rounded-full">
