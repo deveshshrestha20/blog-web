@@ -1,4 +1,4 @@
-# Dynamic Blog Page with Next.js, Tailwind CSS, and Redux
+# Dynamic Blog Page with Next.js, Tailwind CSS,Typescript and Redux
 
 ![GitHub](https://img.shields.io/github/license/deveshshrestha20/blog-web)
 ![GitHub last commit](https://img.shields.io/github/last-commit/deveshshrestha20/blog-web)
@@ -34,7 +34,7 @@
 
 ## Technologies Used
 
-- **Frontend**: Next.js, React.js
+- **Frontend**: Next.js, React.js, Typescript
 - **Styling**: Tailwind CSS
 - **State Management**: Redux
 - **Routing**: Next.js Dynamic Routing
