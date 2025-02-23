@@ -4,18 +4,20 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/deveshshrestha20/blog-web)
 ![GitHub repo size](https://img.shields.io/github/repo-size/deveshshrestha20/blog-web)
 
-🚀 Deployment
-This project has been deployed on Vercel and can be accessed here:
+## 🚀 Deployment  
 
-🔗 Live Demo
+This project has been deployed on **Vercel** and can be accessed here:  
 
-To deploy your own version on Vercel:
+🔗 **[Live Demo](https://blogco.vercel.app/blog)**  
 
-Fork the repository
-Push your changes to GitHub
-Connect the repository to Vercel
-Vercel will automatically build and deploy your project
-For local development and further customization, follow the installation steps mentioned below.
+To deploy your own version on Vercel:  
+
+1. **Fork the repository**  
+2. **Push your changes to GitHub**  
+3. **Connect the repository to Vercel**  
+4. **Vercel will automatically build and deploy your project**  
+
+For local development and further customization, follow the installation steps mentioned below.  
 
 **Dynamic Blog Page** is a modern, responsive blogging platform built using **Next.js**, **Tailwind CSS**, and **Redux**. It fetches blog data from a mock API (or static JSON file) and displays it in a clean, user-friendly layout. The project includes features like dynamic routing, search functionality, pagination, and a responsive design.
 
