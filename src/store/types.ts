@@ -7,6 +7,7 @@ export interface BlogPost {
     category: string;
     image: string;
     readTime: string;
+    slug: string;
   }
   
   export interface BlogState {
